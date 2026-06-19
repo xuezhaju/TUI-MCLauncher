@@ -19,6 +19,10 @@
 - ${SRC_FILES} 自定义的（见上文）
 - 
 
+## CMake和第三方库的安装
+- 第三方库的安装工具：vcpkg
+- 
+
 ## CMake指令
 - 配置项目：cmake -S . -B build
 - 构建项目：cmake --build build

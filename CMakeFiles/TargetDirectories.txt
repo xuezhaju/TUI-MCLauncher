@@ -1,0 +1,3 @@
+/home/l0rax/Projects/Program/CPP/TUI-MCLauncher/CMakeFiles/TUI-MCLauncher.dir
+/home/l0rax/Projects/Program/CPP/TUI-MCLauncher/CMakeFiles/edit_cache.dir
+/home/l0rax/Projects/Program/CPP/TUI-MCLauncher/CMakeFiles/rebuild_cache.dir
