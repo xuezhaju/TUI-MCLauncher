@@ -26,3 +26,6 @@
 ## CMake指令
 - 配置项目：cmake -S . -B build
 - 构建项目：cmake --build build
+
+## Tips:
+- 如果CMakeLists 文件没有改变的话，重新编译项目只需要使用make就行了

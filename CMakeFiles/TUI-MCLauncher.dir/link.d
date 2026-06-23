@@ -3,6 +3,7 @@ TUI-MCLauncher: \
   /usr/lib/gcc/x86_64-pc-linux-gnu/16.1.1/../../../../lib/crti.o \
   /usr/lib/gcc/x86_64-pc-linux-gnu/16.1.1/crtbeginS.o \
   CMakeFiles/TUI-MCLauncher.dir/src/main.cpp.o \
+  CMakeFiles/TUI-MCLauncher.dir/src/ui/hub.cpp.o \
   /usr/lib/libftxui-component.so.7.0.0 \
   /usr/lib/libftxui-dom.so.7.0.0 \
   /usr/lib/libftxui-screen.so.7.0.0 \
@@ -45,6 +46,8 @@ TUI-MCLauncher: \
 /usr/lib/gcc/x86_64-pc-linux-gnu/16.1.1/crtbeginS.o:
 
 CMakeFiles/TUI-MCLauncher.dir/src/main.cpp.o:
+
+CMakeFiles/TUI-MCLauncher.dir/src/ui/hub.cpp.o:
 
 /usr/lib/libftxui-component.so.7.0.0:
 
