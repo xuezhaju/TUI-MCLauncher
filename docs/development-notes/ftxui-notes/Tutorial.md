@@ -6,5 +6,5 @@
 ## Element(元素)
 
 ## Component(组件)
-    ### Interactive Screen(交互式屏幕)
-
+- Interactive Screen(交互式屏幕)
+- Renderer(渲染器)
