@@ -5,6 +5,8 @@
  
 #include "ftxui/dom/node.hpp"      // for Render
 #include "ftxui/screen/color.hpp"  // for ftxui
+#include "ftxui/component/component.hpp"
+#include "ftxui/component/screen_interactive.hpp"
 
 #include <iostream>
 
@@ -17,6 +19,7 @@ int main(void){
 		text("qwq") | color(Color::Red) | flex | border
 	);
 
+	/* 静态屏幕
 	auto screen = Screen::Create(
 		Dimension::Full(),  // width
 		Dimension::Full()   // height
@@ -24,7 +27,15 @@ int main(void){
 	
 	Render(screen, document);
 	screen.Print();
+	*/
+
+	/* 可交互式屏幕 */
+	auto screen = ScreenInteractive::Fullscreen();  // 全屏
+	Component comp = Renderer([&]{
+		return document;
+	});
 	
+	screen.Loop(comp);
 	
 	return 0;
 }

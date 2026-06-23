@@ -5,3 +5,4 @@
 - render:渲染
 - gauge:量规
 - dimension:维度
+- loop:循环

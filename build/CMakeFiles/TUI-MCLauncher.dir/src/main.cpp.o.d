@@ -214,4 +214,33 @@ CMakeFiles/TUI-MCLauncher.dir/src/main.cpp.o: \
  /usr/include/c++/16.1.1/bits/stl_queue.h /usr/include/c++/16.1.1/stack \
  /usr/include/c++/16.1.1/bits/stl_stack.h \
  /usr/include/ftxui/dom/deprecated.hpp /usr/include/c++/16.1.1/stdlib.h \
- /usr/include/c++/16.1.1/iostream
+ /usr/include/ftxui/component/component.hpp \
+ /usr/include/c++/16.1.1/utility \
+ /usr/include/c++/16.1.1/bits/stl_relops.h \
+ /usr/include/c++/16.1.1/bits/intcmp.h \
+ /usr/include/ftxui/util/warn_windows_macro.hpp \
+ /usr/include/ftxui/component/component_base.hpp \
+ /usr/include/ftxui/component/captured_mouse.hpp \
+ /usr/include/ftxui/component/component_options.hpp \
+ /usr/include/c++/16.1.1/chrono /usr/include/c++/16.1.1/bits/chrono.h \
+ /usr/include/c++/16.1.1/ratio /usr/include/c++/16.1.1/ctime \
+ /usr/include/c++/16.1.1/bits/stl_algo.h \
+ /usr/include/c++/16.1.1/bits/algorithmfwd.h \
+ /usr/include/c++/16.1.1/bits/uniform_int_dist.h \
+ /usr/include/c++/16.1.1/bits/chrono_io.h /usr/include/c++/16.1.1/format \
+ /usr/include/c++/16.1.1/charconv /usr/include/c++/16.1.1/locale \
+ /usr/include/c++/16.1.1/bits/locale_facets_nonio.h \
+ /usr/include/c++/16.1.1/x86_64-pc-linux-gnu/bits/time_members.h \
+ /usr/include/c++/16.1.1/x86_64-pc-linux-gnu/bits/messages_members.h \
+ /usr/include/libintl.h /usr/include/c++/16.1.1/bits/codecvt.h \
+ /usr/include/c++/16.1.1/bits/locale_facets_nonio.tcc \
+ /usr/include/c++/16.1.1/bits/locale_conv.h /usr/include/c++/16.1.1/span \
+ /usr/include/c++/16.1.1/bits/formatfwd.h \
+ /usr/include/c++/16.1.1/bits/unicode.h \
+ /usr/include/c++/16.1.1/bits/unicode-data.h \
+ /usr/include/ftxui/component/animation.hpp \
+ /usr/include/ftxui/component/screen_interactive.hpp \
+ /usr/include/ftxui/component/app.hpp /usr/include/c++/16.1.1/atomic \
+ /usr/include/ftxui/component/task.hpp \
+ /usr/include/ftxui/component/event.hpp \
+ /usr/include/ftxui/component/mouse.hpp /usr/include/c++/16.1.1/iostream
