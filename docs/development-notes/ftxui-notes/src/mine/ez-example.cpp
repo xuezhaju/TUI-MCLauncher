@@ -1,3 +1,4 @@
+
 #include <ftxui/dom/elements.hpp>
 #include <stdlib.h>                // for EXIT_SUCCESS
 #include <ftxui/screen/screen.hpp>  // for Full, Screen
@@ -12,10 +13,7 @@ using namespace ftxui;
 using namespace std;
 
 int main(void){
-	auto document = hbox(
-		text("qwq") | color(Color::Pink1) | flex | border ,
-		text("qwq") | color(Color::Red) | flex | border
-	);
+	auto document = text("qwq") | color(Color::Pink1) | border ;
 
 	auto screen = Screen::Create(
 		Dimension::Full(),  // width
