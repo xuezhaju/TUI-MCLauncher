@@ -1,8 +1,10 @@
-# Renderer
+# Renderer(包装器)
+
+- 作用：装饰或者说是包装一个component对象
 
 ## Syntax
 - Renderer(component, function)
-- 第一项为所依赖的component
+- 第一项为所依赖的component,也可以理解为所要装饰的对象
 - 第二项为需要实现的函数体
 - 如果需要依赖许多component类型，则可以使用容器，auto container = Container::Vertical({menu, input, button});
 - Renderer 之所以用lambda语法，不仅仅是因为lambda语法简洁，更是因为在需要实时渲染的环境下，需要一直接受每帧的变化的画面
