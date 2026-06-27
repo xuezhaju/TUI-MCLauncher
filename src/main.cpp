@@ -14,26 +14,16 @@ using namespace ftxui;
 using namespace std;
 
 int main(void){
-	auto document = hbox(
+	auto document = vbox(
 		text("qwq") | color(Color::Pink1) | flex | border ,
-		text("qwq") | color(Color::Red) | flex | border
+		text("qwq") | color(Color::Red) | flex  | border
 	);
-
-	/* 静态屏幕
-	auto screen = Screen::Create(
-		Dimension::Full(),  // width
-		Dimension::Full()   // height
-	);
-	
-	Render(screen, document);
-	screen.Print();
-	*/
 
 	/* 可交互式屏幕 */
 	auto screen = ScreenInteractive::Fullscreen();  // 全屏
 	Component comp = Renderer([&]{
 		return document;
-	});
+	});                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      
 	
 	screen.Loop(comp);
 	
