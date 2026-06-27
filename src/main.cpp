@@ -9,6 +9,7 @@
 #include "ftxui/component/screen_interactive.hpp"
 
 #include <iostream>
+#include <vector>
 
 using namespace ftxui;
 using namespace std;
@@ -18,6 +19,18 @@ int main(void){
 		text("qwq") | color(Color::Pink1) | flex | border ,
 		text("qwq") | color(Color::Red) | flex  | border
 	);
+	
+	vector<string> left_menu_entries = {
+		"个人中心",
+		"整合包市场",
+		"版本",
+		"下载中心"
+	};
+
+	int left_menu_selected_index = 0;
+
+	Component left_menu = 
+		Menu(&left_menu_entries, &left_menu_selected_index);
 
 	/* 可交互式屏幕 */
 	auto screen = ScreenInteractive::Fullscreen();  // 全屏
