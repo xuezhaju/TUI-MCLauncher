@@ -22,6 +22,8 @@ void dowload_page();
 void setting();
 void version();
 
+Component createPlayerMenu();
+
 void side_bar(){
 	std::vector<std::string> tab_values{
 		"个人",
@@ -55,7 +57,7 @@ void side_bar(){
 	int tab_3_selected = 0;
 	auto tab_container = Container::Tab(
 	{
-		Radiobox(&tab_1_entries, &tab_1_selected),
+		createPlayerMenu(),
 		Radiobox(&tab_2_entries, &tab_2_selected),
 		Radiobox(&tab_3_entries, &tab_3_selected),
 	},
@@ -83,17 +85,42 @@ void dowload_page(){
 	
 }
 
-void createPlayerMenu(){
+Component createPlayerMenu(){
 	string playerName;
 	Component name_input = Input(&playerName, "离线玩家名字");
+	Component sure_button = Button({
+		.label = "创建",
+	
+	});
+
+	auto component = Container::Vertical({
+		name_input,
+		sure_button,
+	});
+	
+	return(component);
+	
+	/*
+	auto renderer = Renderer(component, [&]{
+		return(
+			component -> Render()
+			| border
+		);
+	});
+
+	return(renderer);
+	*/
 }
 
 void personal_center(){
 	bool havePlayer = false;
 
-	if (havePlayer != true){
-		
+	if (havePlayer){
 
+	}
+
+	else {
+		createPlayerMenu();	
 	}
 
 }
