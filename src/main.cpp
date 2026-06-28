@@ -36,13 +36,6 @@ void side_bar(){
 	int tab_selected = 0;
 	auto tab_menu = Menu(&tab_values, &tab_selected);
 
-	std::vector<std::string> tab_1_entries{
-		"Forest",
-		"Water",
-		"I don't know",
-	};
-	int tab_1_selected = 0;
-
 	std::vector<std::string> tab_2_entries{
 		"Hello",
 		"Hi",
@@ -97,7 +90,8 @@ Component createPlayerMenu(){
 	auto component = Container::Vertical({
 		name_input,
 		sure_button,
-	});
+	}) |
+	center;
 	
 	return(component);
 	
