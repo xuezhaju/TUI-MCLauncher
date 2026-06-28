@@ -15,8 +15,8 @@
 using namespace ftxui;
 using namespace std;
 
-int main(void){
-	
+void side_bar(){
+
 	vector<string> tags_entries = {
 		"个人中心",
 		"整合包市场",
@@ -30,6 +30,7 @@ int main(void){
 	Component tags_menu = 
 		Menu(&tags_entries, &tags_selected_index);
 
+
 	/* 可交互式屏幕 */
 	auto screen = ScreenInteractive::Fullscreen();  // 全屏
 	Component comp = Renderer(tags_menu, [&]{
@@ -38,9 +39,11 @@ int main(void){
 		});
 	});                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      
 	
-	
-
 	screen.Loop(comp);
+}
+
+int main(void){
+	
 	
 	return 0;
 }
