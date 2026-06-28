@@ -24,6 +24,8 @@ void version();
 
 Component createPlayerMenu();
 
+string playerName;
+
 void side_bar(){
 	std::vector<std::string> tab_values{
 		"个人",
@@ -86,11 +88,10 @@ void dowload_page(){
 }
 
 Component createPlayerMenu(){
-	string playerName;
 	Component name_input = Input(&playerName, "离线玩家名字");
 	Component sure_button = Button({
 		.label = "创建",
-	
+		.on_click = [&]{name_input -> TakeFocus();},	
 	});
 
 	auto component = Container::Vertical({
