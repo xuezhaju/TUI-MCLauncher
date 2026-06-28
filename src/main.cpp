@@ -16,21 +16,15 @@ using namespace ftxui;
 using namespace std;
 
 void side_bar(){
-
-	vector<string> tags_entries = {
+	vector<string> bar_values {
 		"个人中心",
-		"整合包市场",
+		"下载",
 		"版本",
-		"下载中心",
 		"设置"
 	};
+	int bar_selected = 0;
+	auto sidbar = Menu(&bar_values, &bar_selected);
 
-	int tags_selected_index = 0;
-
-	Component tags_menu = 
-		Menu(&tags_entries, &tags_selected_index);
-
-	auto sidebar = window();
 
 }
 
