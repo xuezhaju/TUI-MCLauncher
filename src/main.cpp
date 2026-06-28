@@ -1,3 +1,4 @@
+#include <ftxui/component/component_options.hpp>
 #include <ftxui/dom/elements.hpp>
 #include <stdlib.h>                // for EXIT_SUCCESS
 #include <ftxui/screen/screen.hpp>  // for Full, Screen
@@ -14,6 +15,12 @@
 
 using namespace ftxui;
 using namespace std;
+
+void side_bar();
+void personal_center();
+void dowload_page();
+void setting();
+void version();
 
 void side_bar(){
 	std::vector<std::string> tab_values{
@@ -72,14 +79,32 @@ void side_bar(){
 	screen.Loop(renderer);
 }
 
-void main_page(){
+void dowload_page(){
 	
 }
 
-void menu_render(){
-	/* 可交互式屏幕 */
-	auto screen = ScreenInteractive::Fullscreen();  // 全屏
-	
+void createPlayerMenu(){
+	string playerName;
+	Component name_input = Input(&playerName, "离线玩家名字");
+}
+
+void personal_center(){
+	bool havePlayer = false;
+
+	if (havePlayer != true){
+		
+
+	}
+
+}
+
+
+void setting(){
+
+}
+
+void version(){
+
 }
 
 int main(void){
