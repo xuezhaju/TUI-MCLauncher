@@ -30,20 +30,23 @@ void side_bar(){
 	Component tags_menu = 
 		Menu(&tags_entries, &tags_selected_index);
 
+	auto sidebar = window();
 
+}
+
+void main_page(){
+	
+}
+
+void menu_render(){
 	/* 可交互式屏幕 */
 	auto screen = ScreenInteractive::Fullscreen();  // 全屏
-	Component comp = Renderer(tags_menu, [&]{
-		return({
-			tags_menu -> Render() | center | border;
-		});
-	});                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      
+
 	
-	screen.Loop(comp);
 }
 
 int main(void){
-	
-	
+	side_bar();
+
 	return 0;
 }
