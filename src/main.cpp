@@ -17,9 +17,10 @@ using namespace std;
 
 void side_bar(){
 	std::vector<std::string> tab_values{
-		"tab_1",
-		"tab_2",
-		"tab_3",
+		"个人",
+		"下载",
+		"版本",
+		"设置",
 	};
 	int tab_selected = 0;
 	auto tab_menu = Menu(&tab_values, &tab_selected);
