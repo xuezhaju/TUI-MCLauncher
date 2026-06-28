@@ -16,16 +16,59 @@ using namespace ftxui;
 using namespace std;
 
 void side_bar(){
-	vector<string> bar_values {
-		"个人中心",
-		"下载",
-		"版本",
-		"设置"
+	std::vector<std::string> tab_values{
+		"tab_1",
+		"tab_2",
+		"tab_3",
 	};
-	int bar_selected = 0;
-	auto sidbar = Menu(&bar_values, &bar_selected);
+	int tab_selected = 0;
+	auto tab_menu = Menu(&tab_values, &tab_selected);
 
+	std::vector<std::string> tab_1_entries{
+		"Forest",
+		"Water",
+		"I don't know",
+	};
+	int tab_1_selected = 0;
 
+	std::vector<std::string> tab_2_entries{
+		"Hello",
+		"Hi",
+		"Hay",
+	};
+	int tab_2_selected = 0;
+
+	std::vector<std::string> tab_3_entries{
+		"Table",
+		"Nothing",
+		"Is",
+		"Empty",
+	};
+	int tab_3_selected = 0;
+	auto tab_container = Container::Tab(
+	{
+		Radiobox(&tab_1_entries, &tab_1_selected),
+		Radiobox(&tab_2_entries, &tab_2_selected),
+		Radiobox(&tab_3_entries, &tab_3_selected),
+	},
+	&tab_selected);
+
+	auto container = Container::Horizontal({
+		tab_menu,
+		tab_container,
+	});
+
+	auto renderer = Renderer(container, [&] {
+	return hbox({
+		tab_menu->Render(),
+		separator(),
+		tab_container->Render(),
+	   }) |
+	   border;
+	});
+
+	auto screen = ScreenInteractive::Fullscreen();
+	screen.Loop(renderer);
 }
 
 void main_page(){
@@ -35,7 +78,6 @@ void main_page(){
 void menu_render(){
 	/* 可交互式屏幕 */
 	auto screen = ScreenInteractive::Fullscreen();  // 全屏
-
 	
 }
 
