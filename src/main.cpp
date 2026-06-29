@@ -97,7 +97,13 @@ void createPlayer(){
 }
 
 Component createPlayerMenu(){
-	Component name_input = Input(&playerName, "离线玩家名字");
+	InputOption options;
+	options.placeholder = "请输入名称...";
+	options.multiline = false;
+
+	Component name_input = Input(&playerName, options);
+
+
 	Component sure_button = Button({
 		.label = "创建",
 		.on_click = [&]{createPlayer();},	
