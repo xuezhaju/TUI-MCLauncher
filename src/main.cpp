@@ -35,6 +35,10 @@ struct PlayerMenuState{
 	bool playerModel;                  // 用户创建人物模型的方式，true为史蒂夫模型， false为Alex模型
 };
 
+
+vector<string> CreatedPlayersEnteries;
+int CreatedPlayerSelected;
+
 string playerName;
 
 void side_bar(){
@@ -76,7 +80,7 @@ void side_bar(){
 
 	auto renderer = Renderer(container, [&] {
 	return hbox({
-		tab_menu->Render(),
+		tab_menu->Render() | Color::LightGreen(),
 		separator(),
 		tab_container->Render(),
 	   }) |
@@ -113,20 +117,11 @@ Component createPlayerMenu(){
 	Inputoption.multiline = false;
 
 	MenuOption Menuoption;
-	Menuoption.Vertical;
-
-	vector<string>CreatedPlayersEnteries = {
-		"qwq",
-		"=_=",
-		"awa",
-	};
-	int CreatedPlayerSelected = 0;
+	// Menuoption.Vertical;
 
 	Component name_input = Input(&playerName, Inputoption);
 
-	Component CreatedPlayerList = Menu(
-		&CreatedPlayersEnteries, &CreatedPlayerSelected, Menuoption
-	);
+	Component CreatedPlayerList = Menu(&CreatedPlayersEnteries, &CreatedPlayerSelected);
 
 	Component sure_button = Button({
 		.label = "创建",
@@ -140,7 +135,7 @@ Component createPlayerMenu(){
 		}) 
 		|center | border,
 
-		CreatedPlayerList,
+		CreatedPlayerList | border,
 	});
 	
 	return(component);
