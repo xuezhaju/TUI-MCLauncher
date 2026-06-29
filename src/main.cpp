@@ -80,11 +80,27 @@ void dowload_page(){
 	
 }
 
+void createOfflinePlayer(){
+
+}
+
+void createOnlinePlayer(){
+	
+}
+
+void createURLPlayer(){
+
+}
+
+void createPlayer(){
+
+}
+
 Component createPlayerMenu(){
 	Component name_input = Input(&playerName, "离线玩家名字");
 	Component sure_button = Button({
 		.label = "创建",
-		.on_click = [&]{name_input -> TakeFocus();},	
+		.on_click = [&]{createPlayer();},	
 	});
 
 	auto component = Container::Vertical({
