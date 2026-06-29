@@ -21,6 +21,8 @@ void personal_center();
 void dowload_page();
 void setting();
 void version();
+void createOfflinePlayer();
+void createOnlinePlayer();
 
 Component createPlayerMenu();
 
@@ -97,23 +99,40 @@ void createPlayer(){
 }
 
 Component createPlayerMenu(){
-	InputOption options;
-	options.placeholder = "请输入名称...";
-	options.multiline = false;
+	InputOption Inputoption;
+	Inputoption.placeholder = "请输入名称...";
+	Inputoption.multiline = false;
 
-	Component name_input = Input(&playerName, options);
+	MenuOption Menuoption;
+	Menuoption.Vertical;
 
+	vector<string>CreatedPlayersEnteries = {
+		"qwq",
+		"=_=",
+		"awa",
+	};
+	int CreatedPlayerSelected = 0;
+
+	Component name_input = Input(&playerName, Inputoption);
+
+	Component CreatedPlayerList = Menu(
+		&CreatedPlayersEnteries, &CreatedPlayerSelected, Menuoption
+	);
 
 	Component sure_button = Button({
 		.label = "创建",
 		.on_click = [&]{createPlayer();},	
 	});
 
-	auto component = Container::Vertical({
-		name_input,
-		sure_button,
-	}) |
-	center;
+	auto component = Container::Horizontal({
+		Container::Vertical({
+			name_input,
+			sure_button,
+		}) 
+		|center | border,
+
+		CreatedPlayerList,
+	});
 	
 	return(component);
 	
