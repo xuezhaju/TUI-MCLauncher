@@ -56,3 +56,11 @@ void test(int* ptr)
 	std::cout << n << std::endl;
 }
 ```
+
+## shared_ptr常用函数
+- get()函数，表示返回当前存储的指针（就是被shared_ptr所管理的指针） 。
+但是不建议使用get()函数获取 shared_ptr 关联的原始指针，因为如果在 shared_ptr 析构之前手动调用了delete函数，会导致错误
+- use_count()函数，表示当前引用计数
+- reset()函数，表示重置当前存储的指针
+- operator*，表示返回对存储指针指向的对象的引用。它相当于：* get（）。
+- operator->，表示返回指向存储指针所指向的对象的指针，以便访问其中一个成员。跟get函数一样的效果。

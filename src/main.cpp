@@ -26,6 +26,15 @@ void createOnlinePlayer();
 
 Component createPlayerMenu();
 
+
+struct PlayerMenuState{
+	string playerName;
+	string playerMessage;
+	int creationDate;
+	vector<int> method;// = {0, 1, 2}; // 用户创建账户的方式，0代表正版， 1代表离线， 2代表第三方认证
+	bool playerModel;                  // 用户创建人物模型的方式，true为史蒂夫模型， false为Alex模型
+};
+
 string playerName;
 
 void side_bar(){
