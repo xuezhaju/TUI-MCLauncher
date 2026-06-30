@@ -1,3 +1,5 @@
+#define _CRT_SECURE_NO_WARNINGS
+
 #include <ftxui/component/component_options.hpp>
 #include <ftxui/dom/elements.hpp>
 #include <stdlib.h>                // for EXIT_SUCCESS
@@ -12,6 +14,9 @@
 
 #include <iostream>
 #include <vector>
+#include <ctime>
+#include <stdio.h>
+#include <chrono>
 
 using namespace ftxui;
 using namespace std;
@@ -31,7 +36,7 @@ struct PlayerMenuState{
 	string playerName;
 	string playerMessage;
 	int creationDate;
-	vector<int> method;// = {0, 1, 2}; // 用户创建账户的方式，0代表正版， 1代表离线， 2代表第三方认证
+	int method;// = {0, 1, 2}; // 用户创建账户的方式，0代表正版， 1代表离线， 2代表第三方认证
 	bool playerModel;                  // 用户创建人物模型的方式，true为史蒂夫模型， false为Alex模型
 };
 
@@ -80,7 +85,7 @@ void side_bar(){
 
 	auto renderer = Renderer(container, [&] {
 	return hbox({
-		tab_menu->Render() | Color::LightGreen(),
+		tab_menu->Render(),
 		separator(),
 		tab_container->Render(),
 	   }) |
@@ -95,8 +100,19 @@ void dowload_page(){
 	
 }
 
-void createOfflinePlayer(){
+auto returnLocaltime(){
+	time_t nowtime;
+	time(&nowtime);
+	tm p;
+	localtime(&nowtime);
+	cout << nowtime << endl;
+}
 
+void createOfflinePlayer(string name){
+	PlayerMenuState player;
+	player.method = 1;
+	player.playerName = name;
+	player.creationDate;
 }
 
 void createOnlinePlayer(){
@@ -120,6 +136,12 @@ Component createPlayerMenu(){
 	// Menuoption.Vertical;
 
 	Component name_input = Input(&playerName, Inputoption);
+
+	PlayerMenuState QwQ;
+	QwQ.playerName = "qwq";
+
+	CreatedPlayersEnteries.push_back(QwQ.playerName);
+
 
 	Component CreatedPlayerList = Menu(&CreatedPlayersEnteries, &CreatedPlayerSelected);
 
@@ -175,7 +197,8 @@ void version(){
 }
 
 int main(void){
-	side_bar();
+	// side_bar();
+	returnLocaltime();
 
 	return 0;
 }
